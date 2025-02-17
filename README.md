@@ -1,1 +1,1 @@
-//this a simple for coding practices in php html css and js
+After editing this code it will also be available in this part
