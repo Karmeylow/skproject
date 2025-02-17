@@ -1,0 +1,114 @@
+body {
+    background: #ececec;
+    margin: 0; 
+    padding: 0;
+}
+
+.container {
+    background: linear-gradient(to right, #007bff, #ff0000);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 900px;
+    color: white;
+    text-align: center;
+    margin: 80px auto 0; /* Push below navbar */
+    margin-bottom: 30px;
+}
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.form-control {
+    background: white;
+    color: black;
+    border: none;
+    /* text-transform: uppercase; */
+}
+.form-control::placeholder {
+    color: gray;
+}
+.btn-submit {   
+    border: none;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: gray; /* Default disabled color */
+}
+.btn-submit.active {
+    background-color: blue; /* Active state color */
+}
+.error {
+    color: yellow;
+    font-weight: bold;
+}
+.success {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+select {
+    background: rgba(255, 255, 255, 0.2); /* Default transparent */
+    color: black;
+    border: none;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+select option {
+    background: white;
+    color: black   ;
+}
+
+select:focus, select.selected {
+    background: white; /* Stay white after selection */
+}
+
+/* General Navbar Styling  HERE */
+.navbar {
+    background: linear-gradient(to right, #007bff, #ff0000); /* Blue to Red Gradient */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Makes the icon white */
+}

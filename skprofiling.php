@@ -74,125 +74,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SK Profiling Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: #ececec;
-            margin: 0; 
-            padding: 0;
-        }
-
-        .container {
-            background: linear-gradient(to right, #007bff, #ff0000);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            width: 80%;
-            max-width: 900px;
-            color: white;
-            text-align: center;
-            margin: 80px auto 0; /* Push below navbar */
-            margin-bottom: 30px;
-        }
-        h2 {
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        .form-control {
-            background: white;
-            color: black;
-            border: none;
-            /* text-transform: uppercase; */
-        }
-        .form-control::placeholder {
-            color: gray;
-        }
-        .btn-submit {   
-            border: none;
-            /* text-transform: uppercase; */
-            font-weight: bold;
-            width: 100%;
-            padding: 10px;
-            cursor: pointer;
-            transition: 0.3s;
-            background-color: gray; /* Default disabled color */
-        }
-        .btn-submit.active {
-            background-color: blue; /* Active state color */
-        }
-        .error {
-            color: yellow;
-            font-weight: bold;
-        }
-        .success {
-            color: lightgreen;
-            font-weight: bold;
-        }
-
-        select {
-            background: rgba(255, 255, 255, 0.2); /* Default transparent */
-            color: black;
-            border: none;
-            text-transform: uppercase;
-            transition: background 0.3s ease;
-        }
-
-        select option {
-            background: white;
-            color: black   ;
-        }
-
-        select:focus, select.selected {
-            background: white; /* Stay white after selection */
-        }
-
-
-
-        /* General Navbar Styling  HERE */
-        .navbar {
-            background: linear-gradient(to right, #007bff, #ff0000); /* Blue to Red Gradient */
-            padding: 10px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Navbar Brand */
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white !important;
-        }
-
-        /* Navbar Links */
-        .navbar-nav .nav-link {
-            color: white !important;
-            font-size: 1.1rem;
-            font-weight: 500;
-            padding: 10px 15px;
-            transition: 0.3s ease-in-out;
-        }
-
-        /* Active Link */
-        .navbar-nav .nav-link.active {
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-        }
-
-        /* Hover Effect */
-        .navbar-nav .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        /* Mobile Menu */
-        .navbar-toggler {
-            border: none;
-            outline: none;
-        }
-
-        .navbar-toggler-icon {
-            filter: invert(1); /* Makes the icon white */
-        }
-
-    </style>
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -250,7 +132,7 @@ $conn->close();
         <div class="row">
             <div class="col-md-3">
                 <select name="purok" class="form-control mb-2">
-                    <option value="">SELECT PUROK</option>
+                    <option value=""> PUROK</option> <!--SELECT TITLE --> 
                     <option value="1">PUROK 1</option>
                     <option value="2">PUROK 2</option>
                     <option value="3">PUROK 3</option>
@@ -260,7 +142,7 @@ $conn->close();
             </div>
             <div class="col-md-3">
                 <select name="gender" class="form-control mb-2">
-                    <option value="">SELECT GENDER</option>
+                    <option value="">GENDER</option> <!--SELECT TITLE --> 
                     <option value="Male">MALE</option>
                     <option value="Female">FEMALE</option>
                 </select>
@@ -272,63 +154,85 @@ $conn->close();
         </div>
 
         <h4>Demographic Characteristics</h4>
-
-        <select name="civil_status" class="form-control mb-2">
-            <option value="">Select Civil Status</option>
-            <option value="Single">Single</option>
-            <option value="Married">Married</option>
-            <option value="Widowed">Widowed</option>
-            <option value="Divorced">Divorced</option>
-            <option value="Separated">Separated</option>
-            <option value="Annulled">Annulled</option>
-            <option value="Live-in">Live-in</option>
-        </select>
-
-        <select name="youth_group" class="form-control mb-2">
-            <option value="">Select Youth Age Group</option>
-            <option value="15-17">Child Youth (15-17 yrs old)</option>
-            <option value="18-24">Core Youth (18-24 yrs old)</option>
-            <option value="25-30">Young Adult (25-30 yrs old)</option>
-        </select>
-
-        <select name="education" class="form-control mb-2">
-            <option value="">Select Educational Background</option>
-            <option value="Elementary Level">Elementary Level</option>
-            <option value="Elementary Graduate">Elementary Graduate</option>
-            <option value="Highschool Level">Highschool Level</option>
-            <option value="Highschool Graduate">Highschool Graduate</option>
-            <option value="Vocational Graduate">Vocational Graduate</option>
-            <option value="College Level">College Level</option>
-            <option value="College Graduate">College Graduate</option>
-            <option value="Masters Level">Masters Level</option>
-            <option value="Masters Graduate">Masters Graduate</option>
-            <option value="Doctorate Level">Doctorate Level</option>
-            <option value="Doctorate Graduate">Doctorate Graduate</option>
-        </select>
         
-        <!-- RELIGION -->
-        <select name="religion" class="form-control mb-2">
-            <option value="">Select Religion</option>
-            <option value="Christianity">Christianity</option>
-            <option value="Islam">Islam</option>
-            <option value="Buddhism">Buddhism</option>
-            <option value="Hinduism">Hinduism</option>
-            <option value="Other">Other</option>
-        </select>
+        <div class="row">
+            <div class="col-md-6">
+                <select name="civil_status" class="form-control mb-2">
+                    <option value="">Civil Status</option> <!--SELECT TITLE --> 
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Separated">Separated</option>
+                    <option value="Annulled">Annulled</option>
+                    <option value="Live-in">Live-in</option>
+                </select>
+            </div>
         
-        <!-- HOBBIES AND RELIGION -->
-        <div class="row"> 
-            <div class="col-md-6"> <input type="text" name="hobbies" class="form-control mb-2" placeholder="HOBBIES" required> </div>
-            <div class="col-md-6"> <input type="text" name="talent" class="form-control mb-2" placeholder="TALENTS" required> </div>
+            <div class="col-md-6">
+                <select name="youth_group" class="form-control mb-2">
+                    <option value="">Youth Age Group</option> <!--SELECT TITLE --> 
+                    <option value="15-17">Child Youth (15-17 yrs old)</option>
+                    <option value="18-24">Core Youth (18-24 yrs old)</option>
+                    <option value="25-30">Young Adult (25-30 yrs old)</option>
+                </select>
+            </div>
         </div>
+       
+        <div class="row"> 
+            <div class="col-md-6">
+                    <select name="education" class="form-control mb-2">
+                        <option value="">Educational Background</option> <!--SELECT TITLE --> 
+                        <option value="Elementary Level">Elementary Level</option>
+                        <option value="Elementary Graduate">Elementary Graduate</option>
+                        <option value="Highschool Level">Highschool Level</option>
+                        <option value="Highschool Graduate">Highschool Graduate</option>
+                        <option value="Vocational Graduate">Vocational Graduate</option>
+                        <option value="College Level">College Level</option>
+                        <option value="College Graduate">College Graduate</option>
+                        <option value="Masters Level">Masters Level</option>
+                        <option value="Masters Graduate">Masters Graduate</option>
+                        <option value="Doctorate Level">Doctorate Level</option>
+                        <option value="Doctorate Graduate">Doctorate Graduate</option>
+                    </select>
+            </div>
 
+            <div class="col-md-6">
+                    <input type="text" name="hobbies" class="form-control mb-2" placeholder="SCHOOL OR UNIVERSITY" required> </div>
+            </div>
+       
+        <div class="row">
+            <div class="col-md-4">
+                  <!-- RELIGION -->
+                <select name="religion" class="form-control mb-2">
+                    <option value="">Religion</option> <!--SELECT TITLE --> 
+                    <option value="Christianity">Christianity</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Buddhism">Buddhism</option>
+                    <option value="Hinduism">Hinduism</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <input type="text" name="hobbies" class="form-control mb-2" placeholder="HOBBIES" required>
+            </div>
+
+            <div class="col-md-4">
+                <input type="text" name="talent" class="form-control mb-2" placeholder="TALENTS" required>
+            </div>
+        </div>
+            
         <h4>Guardian Details</h4>
-        <input type="text" name="guardian" class="form-control mb-2" placeholder="Guardian Name">
-        <input type="text" name="guardian_contact" class="form-control mb-2" placeholder="Guardian Contact">
+        <div class="row">
+            <div class="col-md-6"><input type="text" name="guardian" class="form-control mb-2" placeholder="Guardian Name"></div>
+            <div class="col-md-6"><input type="text" name="guardian_contact" class="form-control mb-2" placeholder="Guardian Contact"></div>
+        </div>
+        
         
         <button type="submit" class="btn btn-primary w-100" id="submitBtn">Submit</button>
     </form>
-</div>
+</di>
 
 <!-- Success Modal -->
 <?php if ($success): ?>  
