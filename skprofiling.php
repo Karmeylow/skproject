@@ -217,6 +217,9 @@ $conn->close();
                 <li class="nav-item">
                     <a class="nav-link" href="dashboard.php">Dashboard</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.php">About</a>
+                </li>
             </ul>
         </div>
     </div>
